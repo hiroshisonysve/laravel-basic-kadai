@@ -15,16 +15,12 @@ class PostController extends Controller
         return view('posts.index', compact('posts'));
     }
 
-//    public function show($id)
-//    {
-//        $post = Post::find($id);
-//
-////        if (!$post) {
-////            abort(404);
-////        }
-//
-//        return view('posts.show', compact('post'));
-//    }
+    public function show($id)
+    {
+        $post = Post::find($id);
+
+        return view('posts.show', compact('post'));
+    }
 
     public function create()
     {
